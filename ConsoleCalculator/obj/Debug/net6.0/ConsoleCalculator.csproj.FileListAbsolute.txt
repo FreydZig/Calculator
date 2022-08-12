@@ -1,0 +1,15 @@
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.exe
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.deps.json
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.runtimeconfig.json
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.dll
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ref\ConsoleCalculator.dll
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\bin\Debug\net6.0\ConsoleCalculator.pdb
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.csproj.AssemblyReference.cache
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfoInputs.cache
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.AssemblyInfo.cs
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.csproj.CoreCompileInputs.cache
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.dll
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ref\ConsoleCalculator.dll
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.pdb
+D:\Eboba\ConsoleCalculator\ConsoleCalculator\obj\Debug\net6.0\ConsoleCalculator.genruntimeconfig.cache
