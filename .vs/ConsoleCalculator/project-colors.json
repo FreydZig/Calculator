@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f59f2157-fca2-4bef-af02-9bdaf35acead": {
+      "ProjectGuid": "f59f2157-fca2-4bef-af02-9bdaf35acead",
+      "DisplayName": "ConsoleCalculator",
+      "ColorIndex": 0
+    },
+    "23ccd762-fb21-41f2-a1dc-553d31fe6c4b": {
+      "ProjectGuid": "23ccd762-fb21-41f2-a1dc-553d31fe6c4b",
+      "DisplayName": "CalculatorTests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

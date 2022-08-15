@@ -2,14 +2,22 @@
 
 namespace Calculator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public IConsole MyConsole = new DefaultConsole();
+
+        public static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.RunCalculator();
+        }
+
+        public void RunCalculator()
         {
             bool endApp = false;
             // Display title as the C# console calculator app.
-            Console.WriteLine("Console Calculator in C#\r");
-            Console.WriteLine("------------------------\n");
+            MyConsole.WriteLine("Console Calculator in C#\r");
+            MyConsole.WriteLine("------------------------\n");
 
             Calculator calculator = new Calculator();
             while (!endApp)
@@ -20,58 +28,51 @@ namespace Calculator
                 double result = 0;
 
                 // Ask the user to type the first number.
-                Console.Write("Type a number, and then press Enter: ");
-                numInput1 = Console.ReadLine();
+                MyConsole.Write("Type a number, and then press Enter: ");
+                numInput1 = MyConsole.ReadLine();
 
                 double cleanNum1 = 0;
                 while (!double.TryParse(numInput1, out cleanNum1))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
-                    numInput1 = Console.ReadLine();
+                    MyConsole.Write("This is not valid input. Please enter an integer value: ");
+                    numInput1 = MyConsole.ReadLine();
                 }
 
                 // Ask the user to type the second number.
-                Console.Write("Type another number, and then press Enter: ");
-                numInput2 = Console.ReadLine();
+                MyConsole.Write("Type another number, and then press Enter: ");
+                numInput2 = MyConsole.ReadLine();
 
                 double cleanNum2 = 0;
                 while (!double.TryParse(numInput2, out cleanNum2))
                 {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
-                    numInput2 = Console.ReadLine();
+                    MyConsole.Write("This is not valid input. Please enter an integer value: ");
+                    numInput2 = MyConsole.ReadLine();
                 }
 
                 // Ask the user to choose an operator.
-                Console.WriteLine("Choose an operator from the following list:");
-                Console.WriteLine("\ta - Add");
-                Console.WriteLine("\ts - Subtract");
-                Console.WriteLine("\tm - Multiply");
-                Console.WriteLine("\td - Divide");
-                Console.Write("Your option? ");
+                MyConsole.WriteLine("Choose an operator from the following list:");
+                MyConsole.WriteLine("\ta - Add");
+                MyConsole.WriteLine("\ts - Subtract");
+                MyConsole.WriteLine("\tm - Multiply");
+                MyConsole.WriteLine("\td - Divide");
+                MyConsole.Write("Your option? ");
 
-                string op = Console.ReadLine();
+                string? op = MyConsole.ReadLine();
 
-                try
+                result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                if (double.IsNaN(result))
                 {
-                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
-                    if (double.IsNaN(result))
-                    {
-                        Console.WriteLine("This operation will result in a mathematical error.\n");
-                    }
-                    else Console.WriteLine("Your result: {0:0.##}\n", result);
+                    MyConsole.WriteLine("This operation will result in a mathematical error.\n");
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
-                }
+                else MyConsole.WriteLine("Your result: {0:0.##}\n", result);
 
-                Console.WriteLine("------------------------\n");
+                MyConsole.WriteLine("------------------------\n");
 
                 // Wait for the user to respond before closing.
-                Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-                if (Console.ReadLine() == "n") endApp = true;
+                MyConsole.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
+                if (MyConsole.ReadLine() == "n") endApp = true;
 
-                Console.WriteLine("\n"); // Friendly linespacing.
+                MyConsole.WriteLine("\n"); // Friendly linespacing.
             }
             return;
         }
